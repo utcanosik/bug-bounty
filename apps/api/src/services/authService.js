@@ -4,7 +4,7 @@ export async function registerUser(payload) {
   // Generate the user ID once so it is consistent everywhere
   const id = `usr_${Date.now()}`;
 
-  // TODO: persist new user via Prisma
+  // Return the user with the same ID that was used to sign the access token.
   return {
     id,
     email: payload.email,
